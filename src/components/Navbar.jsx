@@ -6,10 +6,10 @@ import { GithubIcon } from "../assets/icons/GithubIcon";
 
 const navbarLinks = [
   { label: "Home", href: "/#home", ariaLabel: "Home" },
-  { label: "Features", href: "/#features", ariaLabel: "Features" },
-  { label: "Pricing", href: "/#pricing", ariaLabel: "Pricing" },
-  { label: "Feedback", href: "/#feedback", ariaLabel: "Feedback" },
-  { label: "FAQ", href: "/#FAQ", ariaLabel: "FAQ" },
+  { label: "Patterns", href: "https://fabric-api-production.up.railway.app/patterns/names", ariaLabel: "Browse AI Patterns" },
+  { label: "API", href: "https://fabric-api-production.up.railway.app/chat", ariaLabel: "API Documentation" },
+  { label: "Models", href: "https://fabric-api-production.up.railway.app/models/names", ariaLabel: "Available Models" },
+  { label: "Docs", href: "https://fabric-api-production.up.railway.app/docs", ariaLabel: "Documentation" },
 ];
 
 export const Navbar = () => {
@@ -32,9 +32,9 @@ export const Navbar = () => {
               <div className="text-white mr-2 text-6xl">
                 <TailcastLogo />
               </div>
-              <div className="text-white font-['Inter'] font-bold text-xl">
-                Tailcast
-              </div>
+                <div className="text-white font-['Inter'] font-bold text-xl">
+                  Fabric
+                </div>
             </div>
           </a>
         </motion.div>
@@ -67,12 +67,12 @@ export const Navbar = () => {
             <a
               className="text-white main-border-gray rounded-xl
            bg-bgDark2 hover:bg-bgDark3  border-gray-700 pl-6 pr-8 pt-2 pb-2 text-sm flex"
-              href="https://github.com/matt765/Tidestream"
+              href="https://fabric-api-production.up.railway.app/docs"
               target="_blank"
-              aria-label="source code"
+              aria-label="GitHub repository"
             >
               <GithubIcon />
-              <span className="pt-px">Source code</span>
+              <span className="pt-px">View Documentation</span>
             </a>
           </div>
         </motion.div>
@@ -111,11 +111,11 @@ export const Navbar = () => {
                 </a>
               ))}
               <a
-                className="outlined-button pl-6 pr-8 pt-2 pb-2  flex"
-                href="https://rezajafar.com"
+                className="outlined-button pl-6 pr-8 pt-2 pb-2 flex"
+                href="https://fabric-api-production.up.railway.app/docs"
                 target="_blank"
               >
-                About me
+                Documentation
               </a>
             </div>
           </motion.div>

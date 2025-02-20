@@ -1,27 +1,35 @@
-import { FacebookIcon } from "../assets/icons/FacebookIcon";
-import { InstagramIcon } from "../assets/icons/InstagramIcon";
 import { TailcastLogo } from "../assets/logos/TailcastLogo";
-import { TwitterIcon } from "../assets/icons/TwitterIcon";
+import { GithubIcon } from "../assets/icons/GithubIcon";
 
 const footerData = [
   {
-    title: "Products",
-    items: ["Services", "About Us", "News and Stories", "Roadmap"],
-  },
-  {
-    title: "Important Links",
+    title: "API Reference",
     items: [
-      "Organization Team",
-      "Our Journeys",
-      "Pricing Plans",
-      "Roadmap",
-      "Terms & Conditions",
-      "Privacy Policy",
+      { name: "Chat API", href: "https://fabric-api-production.up.railway.app/chat" },
+      { name: "YouTube Processing", href: "https://fabric-api-production.up.railway.app/api/youtube" },
+      { name: "Pattern Management", href: "https://fabric-api-production.up.railway.app/patterns/names" },
+      { name: "Model Selection", href: "https://fabric-api-production.up.railway.app/models/names" },
+      { name: "Health Status", href: "https://fabric-api-production.up.railway.app/health" },
     ],
   },
   {
-    title: "Company",
-    items: ["About Us", "Jobs", "Press", "Contact Us"],
+    title: "Resources",
+    items: [
+      { name: "API Documentation", href: "https://fabric-api-production.up.railway.app/docs" },
+      { name: "Pattern Library", href: "https://fabric-api-production.up.railway.app/patterns/names" },
+      { name: "Model Directory", href: "https://fabric-api-production.up.railway.app/models/names" },
+      { name: "Integration Guide", href: "https://fabric-api-production.up.railway.app/docs#integration" },
+      { name: "Example Projects", href: "https://fabric-api-production.up.railway.app/docs#examples" },
+    ],
+  },
+  {
+    title: "Developer Tools",
+    items: [
+      { name: "API Console", href: "https://fabric-api-production.up.railway.app/console" },
+      { name: "Pattern Testing", href: "https://fabric-api-production.up.railway.app/patterns/test" },
+      { name: "Response Validation", href: "https://fabric-api-production.up.railway.app/docs#validation" },
+      { name: "Request Examples", href: "https://fabric-api-production.up.railway.app/docs#examples" },
+    ],
   },
 ];
 
@@ -37,57 +45,39 @@ export const Footer = () => {
                   <TailcastLogo />
                 </div>
                 <div className="text-white font-['Inter'] font-bold text-xl">
-                  Tailcast
+                  Fabric
                 </div>
               </div>
               <p className="mb-10 mt-4 sm:w-[22rem] lg:w-[20rem] xl:w-[24rem] text-gray-400 leading-loose text-center lg:text-left mx-auto lg:mx-0">
-                Dashboard images were made using free Dark Admin dashboard that
-                you can find
-                <a
-                  href="https://bootstrapious.com/p/bootstrap-4-dark-admin"
-                  target="_blank"
-                  className="text-gray-100 ml-1.5 "
-                  aria-label="Dark Admin Dashboard"
-                >
-                  here.
-                </a>
+                Transform your content with our powerful AI patterns. Process any content through 
+                200+ patterns using leading AI models like GPT-4, Gemini, and Claude.
               </p>
               <div className="w-36 mx-auto lg:mx-0">
                 <a
-                  className="inline-block w-10  h-10 mr-2 p-2 pt-[0.55rem] outlined-button"
-                  href="#"
-                  aria-label="Facebook"
+                  className="inline-block outlined-button px-6 py-3 flex items-center gap-2"
+                  href="https://fabric-api-production.up.railway.app/docs"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  <FacebookIcon />
-                </a>
-                <a
-                  className="inline-block w-10  h-10 mr-2 p-2 pt-[0.55rem] pl-[0.55rem] outlined-button"
-                  href="#"
-                  aria-label="Twitter"
-                >
-                  <TwitterIcon />
-                </a>
-                <a
-                  className="inline-block w-10  h-10 mr-2 p-2 pt-[0.55rem] pl-[0.55rem] outlined-button"
-                  href="#"
-                  aria-label="Instagram"
-                >
-                  <InstagramIcon />
+                  <GithubIcon />
+                  <span>Docs</span>
                 </a>
               </div>
             </div>
             <div className="w-full lg:w-2/3  lg:pl-16 hidden lg:flex flex-wrap justify-between">
               <div className="w-full md:w-1/3 lg:w-auto mb-16 md:mb-0">
-                <h3 className="mb-6 text-2xl font-bold text-primaryText">Products</h3>
+                <h3 className="mb-6 text-2xl font-bold text-primaryText">API Reference</h3>
                 <ul>
                   {footerData[0].items.map((item, index) => (
-                    <li key={`${item}-${index}`} className="mb-4">
+                    <li key={`${item.name}-${index}`} className="mb-4">
                       <a
                         className="text-gray-400 hover:text-gray-300"
-                        href="#"
-                        aria-label={item}
+                        href={item.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={item.name}
                       >
-                        {item}
+                        {item.name}
                       </a>
                     </li>
                   ))}
@@ -95,33 +85,37 @@ export const Footer = () => {
               </div>
               <div className="w-full md:w-1/3 lg:w-auto mb-16 md:mb-0">
                 <h3 className="mb-6 text-2xl font-bold text-primaryText">
-                  Important Links
+                  Resources
                 </h3>
                 <ul>
                   {footerData[1].items.map((item, index) => (
-                    <li key={`${item}-${index}`} className="mb-4">
+                    <li key={`${item.name}-${index}`} className="mb-4">
                       <a
                         className="text-gray-400 hover:text-gray-300"
-                        href="#"
-                        aria-label={item}
+                        href={item.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={item.name}
                       >
-                        {item}
+                        {item.name}
                       </a>
                     </li>
                   ))}
                 </ul>
               </div>
               <div className="w-full md:w-1/3 lg:w-auto">
-                <h3 className="mb-6 text-2xl font-bold text-primaryText">Company</h3>
+                <h3 className="mb-6 text-2xl font-bold text-primaryText">Developer Tools</h3>
                 <ul>
                   {footerData[2].items.map((item, index) => (
-                    <li key={`${item}-${index}`} className="mb-4">
+                    <li key={`${item.name}-${index}`} className="mb-4">
                       <a
                         className="text-gray-400 hover:text-gray-300"
-                        href="#"
-                        aria-label={item}
+                        href={item.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={item.name}
                       >
-                        {item}
+                        {item.name}
                       </a>
                     </li>
                   ))}

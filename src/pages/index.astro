@@ -14,13 +14,15 @@ import { Footer } from '../components/Footer.jsx'
 import { ScrollUpButton } from '../components/ScrollUpButton'
 import '../styles/Theme.css'
 import '../styles/Diagonals.css'
+import { TranscriptGenerator } from '../components/TranscriptGenerator.jsx'
 ---
 
 <Layout title="Tailcast">
   <Navbar client:load />
   <Hero client:load />
-  <Features1 client:load />
-  <Features2 client:load />
+  <TranscriptGenerator client:load />
+  <!-- <Features1 client:load /> -->
+  <!-- <Features2 client:load /> -->
   <!--
   <FeaturesDiagonal client:load />
   <Pricing client:load />
